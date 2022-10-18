@@ -127,3 +127,5 @@ dist
 .pnp.*
 
 config/config.env
+.env
+backend/config/config.env
