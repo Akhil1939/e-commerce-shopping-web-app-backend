@@ -87,7 +87,7 @@ exports.getallOrder = catchAsyncError(async (req, res, next) => {
 exports.updateOrder = catchAsyncError(async (req, res, next) => {
   const order = await Order.findById(req.params.id);
 
-  if ((order.orderStatus = "Delivered")) {
+  if (order.orderStatus == "Delivered") {
     return next(new ErrorHandler("you have delivered this product", 400));
   }
 
@@ -114,7 +114,7 @@ async function updateStock(id, quantity){
 
 //delete order -- admin
 exports.deleteOrder = catchAsyncError(async (req, res, next) => {
-  const orders = await Order.find(req.params.id);
+  const orders = await Order.findById(req.params.id);
   if (!orders) {
     return next(new ErrorHandler("no order placed at", 404));
   }
