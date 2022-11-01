@@ -114,8 +114,8 @@ async function updateStock(id, quantity){
 
 //delete order -- admin
 exports.deleteOrder = catchAsyncError(async (req, res, next) => {
-  const orders = await Order.findById(req.params.id);
-  if (!orders) {
+  const order = await Order.findById(req.params.id);
+  if (!order) {
     return next(new ErrorHandler("no order placed at", 404));
   }
  order.remove()

@@ -25,5 +25,5 @@ process.on("unhandledRejection", err=>{
     console.log("shutting down server due to unhandled rejection")
     server.close(()=>{
         process.exit(1)
-    })
+    }) 
 })
