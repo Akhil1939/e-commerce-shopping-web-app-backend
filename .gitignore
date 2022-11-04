@@ -129,3 +129,4 @@ dist
 config/config.env
 .env
 backend/config/config.env
+frontend/node_modules
