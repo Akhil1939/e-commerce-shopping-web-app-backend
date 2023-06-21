@@ -1,2 +1,3 @@
-# e-commerce-shopping-web-app
- MERN stack
+# e-commerce-shopping-web-server
+
+fully functinal e-commerce website backend
